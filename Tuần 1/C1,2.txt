@@ -1,0 +1,11 @@
+1. Mong muốn & định hướng sau môn học là gì?
+-Trở thành junior mobile dev: hoàn thành 2–3 app nhỏ (1 cá nhân, 1 nhóm) và 1 app đưa lên Store; 
+-chọn stack chính (Kotlin), nắm vòng đời, state, networking; 
+-biết Git, REST/GraphQL, basic backend & DB; làm portfolio + CV, xin thực tập/quản lý mã, test và deploy.
+
+2. 10 năm tới lập trình di động có phát triển không? Vì sao?
+-Có, nhưng sẽ yêu cầu cao hơn. Vì tính di động của các thiết bị để phục vụ các nhu cầu.
+-Công nghệ mới (AI trong app, 5G, thiết bị đeo, màn gập…) -> nhiều idea để làm.
+-Làm app giờ dễ hơn vì có Flutter/Kotlin Multiplatform -> 1 code chạy nhiều nơi.
+-Các mảng “hot” như thanh toán, giao đồ ăn, sức khỏe, giáo dục… vẫn cần app tốt.
+=> Phát triển nhưng cạnh tranh hơn: đòi hỏi giỏi UI/UX, hiệu năng và bảo mật.
