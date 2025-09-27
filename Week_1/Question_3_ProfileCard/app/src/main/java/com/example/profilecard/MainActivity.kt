@@ -1,4 +1,4 @@
-package com.example.profilecard.ui
+package com.example.profilecard
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -24,7 +24,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.profilecard.R
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +34,7 @@ class MainActivity : ComponentActivity() {
                     name = "Huy Nguyen",
                     location = "Ho Chi Minh, VIE",
                     onBack = { this@MainActivity.finish() },
-                    onEdit = {}
+                    onEdit = { }
                 )
             }
         }
@@ -50,15 +49,14 @@ fun ProfileScreen(
     onEdit: () -> Unit
 ) {
     Box(Modifier.fillMaxSize()) {
-
         IconButton(
             onClick = onBack,
-            modifier = Modifier.align(Alignment.TopStart).padding(36.dp)
+            modifier = Modifier.align(Alignment.TopStart).padding(50.dp)
         ) { Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back") }
 
         IconButton(
             onClick = onEdit,
-            modifier = Modifier.align(Alignment.TopEnd).padding(36.dp)
+            modifier = Modifier.align(Alignment.TopEnd).padding(50.dp)
         ) { Icon(Icons.Filled.Edit, contentDescription = "Edit") }
 
         Column(
@@ -70,7 +68,7 @@ fun ProfileScreen(
                 contentDescription = "Avatar",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .size(240.dp)
+                    .size(100.dp)
                     .clip(CircleShape)
                     .border(1.dp, Color(0xFFE2E6EB), CircleShape)
             )
