@@ -22,6 +22,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -29,7 +31,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Surface(Modifier.fillMaxSize(), color = Color(0xFFF7F8FA)) {
+            Surface(Modifier.fillMaxSize(), color = Color.Red) {
                 ProfileScreen(
                     name = "Huy Nguyen",
                     location = "Ho Chi Minh, VIE",
@@ -41,6 +43,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+
 @Composable
 fun ProfileScreen(
     name: String,
@@ -51,16 +54,22 @@ fun ProfileScreen(
     Box(Modifier.fillMaxSize()) {
         IconButton(
             onClick = onBack,
-            modifier = Modifier.align(Alignment.TopStart).padding(50.dp)
+            modifier = Modifier
+                .align(Alignment.TopStart)
+                .padding(50.dp)
         ) { Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back") }
 
         IconButton(
             onClick = onEdit,
-            modifier = Modifier.align(Alignment.TopEnd).padding(50.dp)
+            modifier = Modifier
+                .align(Alignment.TopEnd)
+                .padding(50.dp)
         ) { Icon(Icons.Filled.Edit, contentDescription = "Edit") }
 
         Column(
-            modifier = Modifier.align(Alignment.Center).fillMaxWidth(),
+            modifier = Modifier
+                .align(Alignment.Center)
+                .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
@@ -70,21 +79,24 @@ fun ProfileScreen(
                 modifier = Modifier
                     .size(100.dp)
                     .clip(CircleShape)
-                    .border(1.dp, Color(0xFFE2E6EB), CircleShape)
+                    .border(1.dp, Color.Red, CircleShape)
             )
             Spacer(Modifier.height(16.dp))
             Text(
                 text = name,
                 fontSize = 30.sp,
+                textAlign = TextAlign.Right,
                 fontWeight = FontWeight.SemiBold,
-                color = Color(0xFF1F2937)
+                color = Color.Red
             )
             Spacer(Modifier.height(6.dp))
             Text(
                 text = location,
+                textAlign = TextAlign.Right,
                 fontSize = 20.sp,
-                color = Color(0xFF6B7280)
+                color = Color.Red
             )
         }
     }
 }
+
