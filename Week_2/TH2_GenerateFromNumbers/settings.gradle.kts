@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TH2"
+rootProject.name = "TH2_GenerateFromNumbers"
 include(":app")
+ 
