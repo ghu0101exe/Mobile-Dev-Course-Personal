@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.allbasicui"
+    namespace = "com.example.quanlythuvien"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.allbasicui"
+        applicationId = "com.example.quanlythuvien"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -57,21 +57,7 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
-    // Compose Navigation
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
     implementation("androidx.navigation:navigation-compose:2.7.7")
-
-    // Coil for Image Loading
-    implementation("io.coil-kt:coil-compose:2.6.0")
-
-    implementation(platform("androidx.compose:compose-bom:2024.06.00"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    debugImplementation("androidx.compose.ui:ui-tooling")
-
-    // Điều hướng & tải ảnh
-    implementation("androidx.navigation:navigation-compose:ơ")
-    implementation("io.coil-kt:coil-compose:2.6.0")
-    implementation("androidx.compose.material:material-icons-extended")
-
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.0")
 }
