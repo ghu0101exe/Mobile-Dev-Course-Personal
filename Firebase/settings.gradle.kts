@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SmartTaskUTH"
+rootProject.name = "Firebase"
 include(":app")
  
